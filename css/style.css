@@ -1,0 +1,223 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  /* background-color: black; */
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+  background-color: #172b4d;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 14px;
+  color: #d5dfef;
+}
+
+/* ===== ESTRUTURA PRINCIPAL ===== */
+main {
+  margin-top: 25px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  margin-bottom: 15px;
+}
+
+/* ===== INDICADORES ===== */
+.indicadores {
+  display: flex;
+  gap: 15px;
+}
+
+.indicadores > div {
+  flex: 1;
+  background-color: #f1f5f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.indicadores h3 {
+  font-size: 14px;
+  color: #647488;
+  margin-bottom: 10px;
+}
+
+.indicadores p {
+  font-size: 28px;
+  font-weight: 700;
+  color: #172b44;
+}
+
+/* ===== CHAMADOS ===== */
+
+.chamado {
+  /* Organização dos elementos */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Aparência */
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+
+  /* Espaçamento */
+  padding: 15px;
+  margin-bottom: 10px;
+  gap: 10px;
+
+  /* Outros ajustes */
+  list-style: none;
+}
+
+.chamado__status {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.chamado__status--aberto {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.chamado__status--andamento {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.chamado__status--resolvido {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+/* ===== media queries ===== */
+
+@media (max-width: 600px) {
+  .indicadores {
+    flex-direction: column;
+  }
+
+  .chamado {
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+/* ===== Formulário ===== */
+form {
+  background-color: #f1f5f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.campo-formulario label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #172b4d;
+}
+
+.campo-formulario input,
+.campo-formulario textarea,
+.campo-formulario select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.campo-formulario textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+form button{
+    background-color: #172b4d;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+
+    transition: background-color 0.3s ease;
+ 
+}
+
+form button:hover{
+    background-color: #263f68;
+}
+
+/* Conteúdo do chamado */
+.chamado__descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.chamado__descricao h3 {
+  font-size: 16px;
+  color: #172b4d;
+}
+
+.chamado__descricao p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Prioridade chamado*/
+
+.chamado__prioridade{
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;  
+}
+
+.chamado__prioridade--baixa {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.chamado__prioridade--media {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.chamado__prioridade--alta {
+  background-color: #fee2e2;
+  color: #991b1b;
+}

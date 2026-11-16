@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HelpDesk Fácil</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>HelpDesk Fácil</h1>
+      <p>Painel de atendimento</p>
+    </header>
+    <main>
+      <section>
+        <!-- Visão geral -->
+        <h2>Visão geral</h2>
+        <div class="indicadores">
+          <div>
+            <h3>Abertos</h3>
+            <p>8</p>
+          </div>
+          <div>
+            <h3>Em Andamento</h3>
+            <p>4</p>
+          </div>
+          <div>
+            <h3>Resolvidos</h3>
+            <p>12</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Novo chamado</h2>
+
+        <form id="form-chamado">
+          <div class="campo-formulario">
+            <label for="titulo">Titulo do chamado</label>
+            <input
+              type="text"
+              id="titulo"
+              name="titulo"
+              placeholder="Ex: Erro de conexão com ERP"
+              required
+              maxlength="100"
+            />
+          </div>
+
+          <div class="campo-formulario">
+            <label for="descricao">Descrição</label>
+            <textarea
+              id="descricao"
+              name="descricao"
+              placeholder="Ex: Ao acessar o sistema esta apresentando o erro 500"
+              required
+            ></textarea>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="prioridade">Prioridade</label>
+            <select id="prioridade" name="prioridade" required>
+              <option value="">Selecione</option>
+              <option value="baixa">Baixa</option>
+              <option value="media">Média</option>
+              <option value="alta">Alta</option>
+            </select>
+          </div>
+          <button type="submit">Cadastrar chamado</button>
+        </form>
+      </section>
+
+      <section>
+        <!-- Chamados recentes -->
+        <h2>Chamados recentes</h2>
+        <ul id="lista-chamados">
+          <!-- <li class="chamado chamado--prioridade-alta">
+            <div class="chamado__descricao">
+              <h3>Erro de conexão com ERP</h3>
+              <small class="chamado__id">#001</small>
+            </div>
+            <span class="chamado__status chamado__status--aberto">Aberto</span>
+          </li>
+          <li class="chamado chamado--prioridade-alta">
+            <div class="chamado__descricao">
+              <h3>Impressora não funciona</h3>
+              <small class="chamado__id">#002</small>
+            </div>
+            <span class="chamado__status chamado__status--resolvido"
+              >Resolvido</span
+            >
+          </li>
+          <li class="chamado chamado--prioridade-alta">
+            <div class="chamado__descricao">
+              <h3>Lentidão no sistema</h3>
+              <small class="chamado__id">#003</small>
+            </div>
+            <span class="chamado__status chamado__status--andamento"
+              >Em Andamento</span
+            >
+          </li> -->
+        </ul>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
